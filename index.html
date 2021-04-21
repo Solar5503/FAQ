@@ -3,54 +3,192 @@
     <head>
         <meta charset="utf-8">
         <title>Часто задаваемые вопросы</title>
-        <link rel="stylesheet" href='style.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href='css/style.css'>
+        <link rel="stylesheet" href="css/media.css">
         <link rel="icon" href='img/fav.svg' type='image'>
     </head>
-    <body >
-
-        <header class="header">
-            <img class="logo" src='img/question.svg' alt='Логотип'>
-            <h1 class="heading">Часто задаваемые вопросы</h1>      
+    <body class="body body_theme_sky">
+        <header class="header header_theme_sky">
+            <div class="mobile-menu header__mobile-menu">
+		        <label class="mobile-menu__toggle" for="toggle-menu"></label>
+	        </div>
+            <img class="header__logo" src='img/question.svg' alt='Логотип'>
+            <h1 class="header__heading">Часто задаваемые вопросы</h1>      
         </header>
-  
         <main class="page">
-            <nav class="nav">
-               <ul class="menu">
-                   <li class="active"><a href='#'>Chrome</a></li>
-                   <li><a href='#1'>Word</a></li>
-                   <li><a href='#2'>Excel</a></li>
-                   <li><a href='#3'>Доступ</a></li>
-                   <li><a href='#4'>Общее</a></li>
-               </ul> 
+            <nav class="nav nav_theme_sky">
+                <input class="nav__input hidden" type="checkbox" id="toggle-menu">
+                <div class="pc-menu">
+                    <ul class="pc-menu__list" id='navList'>
+                        <li ><a class="pc-menu__ref pc-menu__ref_theme_sky" href='#1' data-category="chrome">Chrome</a></li>
+                        <li ><a class="pc-menu__ref pc-menu__ref_theme_sky" href='#2' data-category="word">Word</a></li>
+                        <li ><a class="pc-menu__ref pc-menu__ref_theme_sky" href='#3' data-category="excel">Excel</a></li>
+                        <li ><a class="pc-menu__ref pc-menu__ref_theme_sky" href='#4' data-category="access">Доступ</a></li>
+                        <li ><a class="pc-menu__ref pc-menu__ref_theme_sky" href='#5' data-category="general">Общее</a></li>
+                        <li ><a class="pc-menu__ref pc-menu__ref_theme_sky" href='#6' data-category="all">Все</a></li>
+                    </ul> 
+                </div>
             </nav>
             <section class="questions">
-                <article class="item chrome">
-                    <h2>Как очистить историю браузера(Chrome)</h2>
-                    <ol> Необходимо выполнить несколько пунктов:
-                        <li>Запустить браузер Chrome</li>
-                        <li> В правом верхнем углу нажать три вертикальные  точки</li>
-                        <li>Из раскрывшегося меню выбрать пункт "История"->"История" (Ctrl+H)</li>
-                        <li>Слева выбрать пункт "Очистить историю"</li>
-                        <li>В появившемся окне нажать "Дополнительные", где :
-                            <ul>
-                                <li>Во "Временном диапазоне" выбрать пункт "За всё время" </li>
-                                <li>Поставить все галочки, кроме  "Пароли и другие данные для входа" и "Данные для автозаполнения"</li>
-                                <li>Нажать кнопку"Удалить данные"</li>
-                            </ul>
-                        </li>
-                        <li>Перезапустить браузер Chrome</li>
-                    </ol>
-                    <video controls width="400" height="300" preload="none" poster="img/video.jpg">
-                        <source src="video/history.mp4" type="video/mp4">
-                    </video>
+                <article class="item" data-category="chrome">
+                    <h3 class="item__h3">Как очистить историю браузера(Chrome)</h3>
+                    <input class="item__input hidden" type="checkbox" id="button1">
+                    <div class="item__envelope hidden">
+                        <ol> Необходимо выполнить несколько пунктов:
+                            <li>Запустить браузер Chrome</li>
+                            <li> В правом верхнем углу нажать три вертикальные  точки</li>
+                            <li>Из раскрывшегося меню выбрать пункт "История"->"История" (Ctrl+H)</li>
+                            <li>Слева выбрать пункт "Очистить историю"</li>
+                            <li>В появившемся окне нажать "Дополнительные", где :
+                                <ul>
+                                    <li>Во "Временном диапазоне" выбрать пункт "За всё время" </li>
+                                    <li>Поставить все галочки, кроме  "Пароли и другие данные для входа" и "Данные для автозаполнения"</li>
+                                    <li>Нажать кнопку"Удалить данные"</li>
+                                </ul>
+                            </li>
+                            <li>Перезапустить браузер Chrome</li>
+                        </ol>
+                        <div class="item__wrapper">
+                            <video controls width="400" height="300" preload="none" poster="img/video.jpg">
+                                <source src="video/history.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <label class="item__label item__label_theme_sky" for="button1">Подробнее</label>
+                </article>
+                <article class="item" data-category="excel">
+                    <h3 class="item__h3">Как найти вхождения значений столбца одной таблицы в значения столбца другой таблицы (функция ВПР)</h3>
+                    <input class="item__input hidden" type="checkbox" id="button2">
+                    <div class="item__envelope hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor egestas, vulputate nisl eu, ultricies est. Donec accumsan fringilla massa, quis condimentum nunc facilisis eu. In pharetra massa augue, et pulvinar urna vestibulum eget. Nunc tristique pretium neque quis elementum. Fusce eu ultrices massa. Nam tristique elit vitae nulla tincidunt hendrerit. Nunc nec urna euismod, accumsan ante vitae, mollis mi. Nam condimentum accumsan dui ultricies lobortis. Duis imperdiet tincidunt lacus, eget fermentum sapien tincidunt sed. Sed varius condimentum sapien. Proin pulvinar, libero nec faucibus imperdiet, est erat sodales magna, eu elementum diam nibh sit amet diam. Fusce ut massa sem. Ut ornare, tortor sit amet tristique dignissim, erat arcu feugiat lorem, in fermentum justo erat vitae turpis. In at leo sit amet odio rutrum aliquam.
+                        </p>
+
+                        <p>   Fusce non aliquet velit, in ornare erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec feugiat consequat velit vitae tempus. Aliquam suscipit sit amet libero sollicitudin pulvinar. Curabitur augue ex, aliquet a orci eget, consectetur interdum lacus. Cras gravida porta blandit. Fusce semper ultricies felis in tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus velit diam, ullamcorper at sodales ac, hendrerit id ante. Quisque vestibulum lacus vel nunc cursus vehicula. Sed sed ante ornare, varius libero in, varius elit. Maecenas dapibus massa lacus, a elementum massa semper ut.
+                        
+                        Aliquam dolor dolor, interdum nec bibendum maximus, finibus sit amet risus. Etiam finibus luctus risus in aliquam. Proin condimentum lobortis magna, ac sollicitudin ipsum congue et. Ut vel faucibus mauris, ut finibus eros. Ut hendrerit sagittis venenatis. Aliquam sit amet nisi enim. Maecenas sagittis accumsan orci ac dapibus. Vestibulum ac ornare ex, in consequat nulla. Morbi scelerisque nisi id arcu mollis, ut pretium ante rutrum. Nam non arcu nec urna molestie facilisis eget in purus. Aenean eu mi in nibh interdum tempor non ac diam. Praesent placerat dignissim neque at viverra. Pellentesque posuere ipsum metus, id fermentum sapien consectetur tristique. Quisque sollicitudin sodales lectus, vel pellentesque nisi lacinia id. Nunc mi nulla, tincidunt vitae ante eu, accumsan dignissim diam.
+                        </p>
+                        <img class="item__big-image" src="img/check.jpg" alt="Проверка">
+                     </div>
+                    <label class="item__label item__label_theme_sky" for="button2">Подробнее</label>
+                </article>
+                <article class="item" data-category="word">
+                    <h3 class="item__h3">Как добавить и удалить колонтитулы</h3>
+                    <input class="item__input hidden" type="checkbox" id="button3">
+                    <div class="item__envelope hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor egestas, vulputate nisl eu, ultricies est. Donec accumsan fringilla massa, quis condimentum nunc facilisis eu. In pharetra massa augue, et pulvinar urna vestibulum eget. Nunc tristique pretium neque quis elementum. Fusce eu ultrices massa. Nam tristique elit vitae nulla tincidunt hendrerit. Nunc nec urna euismod, accumsan ante vitae, mollis mi. Nam condimentum accumsan dui ultricies lobortis. Duis imperdiet tincidunt lacus, eget fermentum sapien tincidunt sed. Sed varius condimentum sapien. Proin pulvinar, libero nec faucibus imperdiet, est erat sodales magna, eu elementum diam nibh sit amet diam. Fusce ut massa sem. Ut ornare, tortor sit amet tristique dignissim, erat arcu feugiat lorem, in fermentum justo erat vitae turpis. In at leo sit amet odio rutrum aliquam.
+                        <img class="item__small-image" src="img/check.jpg" alt="Проверка">
+                        </p>
+                    
+                        <p>   Fusce non aliquet velit, in ornare erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec feugiat consequat velit vitae tempus. Aliquam suscipit sit amet libero sollicitudin pulvinar. Curabitur augue ex, aliquet a orci eget, consectetur interdum lacus. Cras gravida porta blandit. Fusce semper ultricies felis in tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus velit diam, ullamcorper at sodales ac, hendrerit id ante. Quisque vestibulum lacus vel nunc cursus vehicula. Sed sed ante ornare, varius libero in, varius elit. Maecenas dapibus massa lacus, a elementum massa semper ut.
+                        
+                        Aliquam dolor dolor, interdum nec bibendum maximus, finibus sit amet risus. Etiam finibus luctus risus in aliquam. Proin condimentum lobortis magna, ac sollicitudin ipsum congue et. Ut vel faucibus mauris, ut finibus eros. Ut hendrerit sagittis venenatis. Aliquam sit amet nisi enim. Maecenas sagittis accumsan orci ac dapibus. Vestibulum ac ornare ex, in consequat nulla. Morbi scelerisque nisi id arcu mollis, ut pretium ante rutrum. Nam non arcu nec urna molestie facilisis eget in purus. Aenean eu mi in nibh interdum tempor non ac diam. Praesent placerat dignissim neque at viverra. Pellentesque posuere ipsum metus, id fermentum sapien consectetur tristique. Quisque sollicitudin sodales lectus, vel pellentesque nisi lacinia id. Nunc mi nulla, tincidunt vitae ante eu, accumsan dignissim diam.
+                        </p>
+                    </div>
+                    <label class="item__label item__label_theme_sky" for="button3">Подробнее</label>
+                </article>
+                <article class="item" data-category="access">
+                    <h3 class="item__h3">Как выглядят логины (имена пользователей) для разных сервисов ФСС</h3>
+                    <input class="item__input hidden" type="checkbox" id="button4">
+                    <div class="item__envelope hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor egestas, vulputate nisl eu, ultricies est. Donec accumsan fringilla massa, quis condimentum nunc facilisis eu. In pharetra massa augue, et pulvinar urna vestibulum eget. Nunc tristique pretium neque quis elementum. Fusce eu ultrices massa. Nam tristique elit vitae nulla tincidunt hendrerit. Nunc nec urna euismod, accumsan ante vitae, mollis mi. Nam condimentum accumsan dui ultricies lobortis. Duis imperdiet tincidunt lacus, eget fermentum sapien tincidunt sed. Sed varius condimentum sapien. Proin pulvinar, libero nec faucibus imperdiet, est erat sodales magna, eu elementum diam nibh sit amet diam. Fusce ut massa sem. Ut ornare, tortor sit amet tristique dignissim, erat arcu feugiat lorem, in fermentum justo erat vitae turpis. In at leo sit amet odio rutrum aliquam.
+                        <img class="item__small-image" src="img/check.jpg" alt="Проверка">
+                        </p>
+                    
+                        <p>   Fusce non aliquet velit, in ornare erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec feugiat consequat velit vitae tempus. Aliquam suscipit sit amet libero sollicitudin pulvinar. Curabitur augue ex, aliquet a orci eget, consectetur interdum lacus. Cras gravida porta blandit. Fusce semper ultricies felis in tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus velit diam, ullamcorper at sodales ac, hendrerit id ante. Quisque vestibulum lacus vel nunc cursus vehicula. Sed sed ante ornare, varius libero in, varius elit. Maecenas dapibus massa lacus, a elementum massa semper ut.
+                        
+                        Aliquam dolor dolor, interdum nec bibendum maximus, finibus sit amet risus. Etiam finibus luctus risus in aliquam. Proin condimentum lobortis magna, ac sollicitudin ipsum congue et. Ut vel faucibus mauris, ut finibus eros. Ut hendrerit sagittis venenatis. Aliquam sit amet nisi enim. Maecenas sagittis accumsan orci ac dapibus. Vestibulum ac ornare ex, in consequat nulla. Morbi scelerisque nisi id arcu mollis, ut pretium ante rutrum. Nam non arcu nec urna molestie facilisis eget in purus. Aenean eu mi in nibh interdum tempor non ac diam. Praesent placerat dignissim neque at viverra. Pellentesque posuere ipsum metus, id fermentum sapien consectetur tristique. Quisque sollicitudin sodales lectus, vel pellentesque nisi lacinia id. Nunc mi nulla, tincidunt vitae ante eu, accumsan dignissim diam.
+                        </p>
+                    </div>
+                    <label class="item__label item__label_theme_sky" for="button4">Подробнее</label>
+                </article>
+                <article class="item" data-category="general">
+                    <h3 class="item__h3">Где посмотреть свой табельный номер</h3>
+                    <input class="item__input hidden" type="checkbox" id="button5">
+                    <div class="item__envelope hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor egestas, vulputate nisl eu, ultricies est. Donec accumsan fringilla massa, quis condimentum nunc facilisis eu. In pharetra massa augue, et pulvinar urna vestibulum eget. Nunc tristique pretium neque quis elementum. Fusce eu ultrices massa. Nam tristique elit vitae nulla tincidunt hendrerit. Nunc nec urna euismod, accumsan ante vitae, mollis mi. Nam condimentum accumsan dui ultricies lobortis. Duis imperdiet tincidunt lacus, eget fermentum sapien tincidunt sed. Sed varius condimentum sapien. Proin pulvinar, libero nec faucibus imperdiet, est erat sodales magna, eu elementum diam nibh sit amet diam. Fusce ut massa sem. Ut ornare, tortor sit amet tristique dignissim, erat arcu feugiat lorem, in fermentum justo erat vitae turpis. In at leo sit amet odio rutrum aliquam.
+                        
+                        </p>
+                    
+                        <p>   Fusce non aliquet velit, in ornare erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec feugiat consequat velit vitae tempus. Aliquam suscipit sit amet libero sollicitudin pulvinar. Curabitur augue ex, aliquet a orci eget, consectetur interdum lacus. Cras gravida porta blandit. Fusce semper ultricies felis in tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus velit diam, ullamcorper at sodales ac, hendrerit id ante. Quisque vestibulum lacus vel nunc cursus vehicula. Sed sed ante ornare, varius libero in, varius elit. Maecenas dapibus massa lacus, a elementum massa semper ut.
+                        
+                        Aliquam dolor dolor, interdum nec bibendum maximus, finibus sit amet risus. Etiam finibus luctus risus in aliquam. Proin condimentum lobortis magna, ac sollicitudin ipsum congue et. Ut vel faucibus mauris, ut finibus eros. Ut hendrerit sagittis venenatis. Aliquam sit amet nisi enim. Maecenas sagittis accumsan orci ac dapibus. Vestibulum ac ornare ex, in consequat nulla. Morbi scelerisque nisi id arcu mollis, ut pretium ante rutrum. Nam non arcu nec urna molestie facilisis eget in purus. Aenean eu mi in nibh interdum tempor non ac diam. Praesent placerat dignissim neque at viverra. Pellentesque posuere ipsum metus, id fermentum sapien consectetur tristique. Quisque sollicitudin sodales lectus, vel pellentesque nisi lacinia id. Nunc mi nulla, tincidunt vitae ante eu, accumsan dignissim diam.
+                        </p>
+                    </div>
+                    <label class="item__label item__label_theme_sky" for="button5">Подробнее</label>
+                </article>
+            
+                <article class="item" data-category="general">
+                    <h3 class="item__h3">Где находится программа для заполнения справок БК</h3>
+                    <input class="item__input hidden" type="checkbox" id="button6">
+                    <div class="item__envelope hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor egestas, vulputate nisl eu, ultricies est. Donec accumsan fringilla massa, quis condimentum nunc facilisis eu. In pharetra massa augue, et pulvinar urna vestibulum eget. Nunc tristique pretium neque quis elementum. Fusce eu ultrices massa. Nam tristique elit vitae nulla tincidunt hendrerit. Nunc nec urna euismod, accumsan ante vitae, mollis mi. Nam condimentum accumsan dui ultricies lobortis. Duis imperdiet tincidunt lacus, eget fermentum sapien tincidunt sed. Sed varius condimentum sapien. Proin pulvinar, libero nec faucibus imperdiet, est erat sodales magna, eu elementum diam nibh sit amet diam. Fusce ut massa sem. Ut ornare, tortor sit amet tristique dignissim, erat arcu feugiat lorem, in fermentum justo erat vitae turpis. In at leo sit amet odio rutrum aliquam.
+                    
+                        </p>
+                
+                        <p>   Fusce non aliquet velit, in ornare erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec feugiat consequat velit vitae tempus. Aliquam suscipit sit amet libero sollicitudin pulvinar. Curabitur augue ex, aliquet a orci eget, consectetur interdum lacus. Cras gravida porta blandit. Fusce semper ultricies felis in tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus velit diam, ullamcorper at sodales ac, hendrerit id ante. Quisque vestibulum lacus vel nunc cursus vehicula. Sed sed ante ornare, varius libero in, varius elit. Maecenas dapibus massa lacus, a elementum massa semper ut.
+                    
+                    Aliquam dolor dolor, interdum nec bibendum maximus, finibus sit amet risus. Etiam finibus luctus risus in aliquam. Proin condimentum lobortis magna, ac sollicitudin ipsum congue et. Ut vel faucibus mauris, ut finibus eros. Ut hendrerit sagittis venenatis. Aliquam sit amet nisi enim. Maecenas sagittis accumsan orci ac dapibus. Vestibulum ac ornare ex, in consequat nulla. Morbi scelerisque nisi id arcu mollis, ut pretium ante rutrum. Nam non arcu nec urna molestie facilisis eget in purus. Aenean eu mi in nibh interdum tempor non ac diam. Praesent placerat dignissim neque at viverra. Pellentesque posuere ipsum metus, id fermentum sapien consectetur tristique. Quisque sollicitudin sodales lectus, vel pellentesque nisi lacinia id. Nunc mi nulla, tincidunt vitae ante eu, accumsan dignissim diam.
+                        </p>
+                    </div>
+                    <label class="item__label item__label_theme_sky" for="button6">Подробнее</label>
+                </article>
+                <article class="item" data-category="word">
+                    <h3 class="item__h3">Как сделать первый лист в документе альбомной ориентации</h3>
+                    <input class="item__input hidden" type="checkbox" id="button7">
+                    <div class="item__envelope hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor egestas, vulputate nisl eu, ultricies est. Donec accumsan fringilla massa, quis condimentum nunc facilisis eu. In pharetra massa augue, et pulvinar urna vestibulum eget. Nunc tristique pretium neque quis elementum. Fusce eu ultrices massa. Nam tristique elit vitae nulla tincidunt hendrerit. Nunc nec urna euismod, accumsan ante vitae, mollis mi. Nam condimentum accumsan dui ultricies lobortis. Duis imperdiet tincidunt lacus, eget fermentum sapien tincidunt sed. Sed varius condimentum sapien. Proin pulvinar, libero nec faucibus imperdiet, est erat sodales magna, eu elementum diam nibh sit amet diam. Fusce ut massa sem. Ut ornare, tortor sit amet tristique dignissim, erat arcu feugiat lorem, in fermentum justo erat vitae turpis. In at leo sit amet odio rutrum aliquam.
+                        <img class="item__small-image" src="img/check.jpg" alt="Проверка">
+                        </p>
+                    
+                        <p>   Fusce non aliquet velit, in ornare erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec feugiat consequat velit vitae tempus. Aliquam suscipit sit amet libero sollicitudin pulvinar. Curabitur augue ex, aliquet a orci eget, consectetur interdum lacus. Cras gravida porta blandit. Fusce semper ultricies felis in tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus velit diam, ullamcorper at sodales ac, hendrerit id ante. Quisque vestibulum lacus vel nunc cursus vehicula. Sed sed ante ornare, varius libero in, varius elit. Maecenas dapibus massa lacus, a elementum massa semper ut.
+                        
+                        Aliquam dolor dolor, interdum nec bibendum maximus, finibus sit amet risus. Etiam finibus luctus risus in aliquam. Proin condimentum lobortis magna, ac sollicitudin ipsum congue et. Ut vel faucibus mauris, ut finibus eros. Ut hendrerit sagittis venenatis. Aliquam sit amet nisi enim. Maecenas sagittis accumsan orci ac dapibus. Vestibulum ac ornare ex, in consequat nulla. Morbi scelerisque nisi id arcu mollis, ut pretium ante rutrum. Nam non arcu nec urna molestie facilisis eget in purus. Aenean eu mi in nibh interdum tempor non ac diam. Praesent placerat dignissim neque at viverra. Pellentesque posuere ipsum metus, id fermentum sapien consectetur tristique. Quisque sollicitudin sodales lectus, vel pellentesque nisi lacinia id. Nunc mi nulla, tincidunt vitae ante eu, accumsan dignissim diam.
+                        </p>
+                    </div>
+                    <label class="item__label item__label_theme_sky" for="button7">Подробнее</label>
+                </article>
+                <article class="item" data-category="chrome">
+                    <h3 class="item__h3">Как поменять масштаб страницы</h3>
+                    <input class="item__input hidden" type="checkbox" id="button8">
+                    <div class="item__envelope hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor egestas, vulputate nisl eu, ultricies est. Donec accumsan fringilla massa, quis condimentum nunc facilisis eu. In pharetra massa augue, et pulvinar urna vestibulum eget. Nunc tristique pretium neque quis elementum. Fusce eu ultrices massa. Nam tristique elit vitae nulla tincidunt hendrerit. Nunc nec urna euismod, accumsan ante vitae, mollis mi. Nam condimentum accumsan dui ultricies lobortis. Duis imperdiet tincidunt lacus, eget fermentum sapien tincidunt sed. Sed varius condimentum sapien. Proin pulvinar, libero nec faucibus imperdiet, est erat sodales magna, eu elementum diam nibh sit amet diam. Fusce ut massa sem. Ut ornare, tortor sit amet tristique dignissim, erat arcu feugiat lorem, in fermentum justo erat vitae turpis. In at leo sit amet odio rutrum aliquam.
+                        <img class="item__small-image" src="img/check.jpg" alt="Проверка">
+                        </p>
+                    
+                        <p>   Fusce non aliquet velit, in ornare erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec feugiat consequat velit vitae tempus. Aliquam suscipit sit amet libero sollicitudin pulvinar. Curabitur augue ex, aliquet a orci eget, consectetur interdum lacus. Cras gravida porta blandit. Fusce semper ultricies felis in tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus velit diam, ullamcorper at sodales ac, hendrerit id ante. Quisque vestibulum lacus vel nunc cursus vehicula. Sed sed ante ornare, varius libero in, varius elit. Maecenas dapibus massa lacus, a elementum massa semper ut.
+                        
+                        Aliquam dolor dolor, interdum nec bibendum maximus, finibus sit amet risus. Etiam finibus luctus risus in aliquam. Proin condimentum lobortis magna, ac sollicitudin ipsum congue et. Ut vel faucibus mauris, ut finibus eros. Ut hendrerit sagittis venenatis. Aliquam sit amet nisi enim. Maecenas sagittis accumsan orci ac dapibus. Vestibulum ac ornare ex, in consequat nulla. Morbi scelerisque nisi id arcu mollis, ut pretium ante rutrum. Nam non arcu nec urna molestie facilisis eget in purus. Aenean eu mi in nibh interdum tempor non ac diam. Praesent placerat dignissim neque at viverra. Pellentesque posuere ipsum metus, id fermentum sapien consectetur tristique. Quisque sollicitudin sodales lectus, vel pellentesque nisi lacinia id. Nunc mi nulla, tincidunt vitae ante eu, accumsan dignissim diam.
+                        </p>
+                    </div>
+                    <label class="item__label item__label_theme_sky" for="button8">Подробнее</label>
+                </article>
+                <article class="item" data-category="chrome">
+                    <h3 class="item__h3">Как добавить страницу в закладки</h3>
+                    <input class="item__input hidden" type="checkbox" id="button9">
+                    <div class="item__envelope hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor egestas, vulputate nisl eu, ultricies est. Donec accumsan fringilla massa, quis condimentum nunc facilisis eu. In pharetra massa augue, et pulvinar urna vestibulum eget. Nunc tristique pretium neque quis elementum. Fusce eu ultrices massa. Nam tristique elit vitae nulla tincidunt hendrerit. Nunc nec urna euismod, accumsan ante vitae, mollis mi. Nam condimentum accumsan dui ultricies lobortis. Duis imperdiet tincidunt lacus, eget fermentum sapien tincidunt sed. Sed varius condimentum sapien. Proin pulvinar, libero nec faucibus imperdiet, est erat sodales magna, eu elementum diam nibh sit amet diam. Fusce ut massa sem. Ut ornare, tortor sit amet tristique dignissim, erat arcu feugiat lorem, in fermentum justo erat vitae turpis. In at leo sit amet odio rutrum aliquam.
+                        <img class="item__small-image" src="img/check.jpg" alt="Проверка">
+                        </p>
+                    
+                        <p>   Fusce non aliquet velit, in ornare erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec feugiat consequat velit vitae tempus. Aliquam suscipit sit amet libero sollicitudin pulvinar. Curabitur augue ex, aliquet a orci eget, consectetur interdum lacus. Cras gravida porta blandit. Fusce semper ultricies felis in tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus velit diam, ullamcorper at sodales ac, hendrerit id ante. Quisque vestibulum lacus vel nunc cursus vehicula. Sed sed ante ornare, varius libero in, varius elit. Maecenas dapibus massa lacus, a elementum massa semper ut.
+                        
+                        Aliquam dolor dolor, interdum nec bibendum maximus, finibus sit amet risus. Etiam finibus luctus risus in aliquam. Proin condimentum lobortis magna, ac sollicitudin ipsum congue et. Ut vel faucibus mauris, ut finibus eros. Ut hendrerit sagittis venenatis. Aliquam sit amet nisi enim. Maecenas sagittis accumsan orci ac dapibus. Vestibulum ac ornare ex, in consequat nulla. Morbi scelerisque nisi id arcu mollis, ut pretium ante rutrum. Nam non arcu nec urna molestie facilisis eget in purus. Aenean eu mi in nibh interdum tempor non ac diam. Praesent placerat dignissim neque at viverra. Pellentesque posuere ipsum metus, id fermentum sapien consectetur tristique. Quisque sollicitudin sodales lectus, vel pellentesque nisi lacinia id. Nunc mi nulla, tincidunt vitae ante eu, accumsan dignissim diam.
+                        </p>
+                        <img class="item__big-image" src="img/check.jpg" alt="Проверка">
+                    </div>
+                    <label class="item__label item__label_theme_sky" for="button9">Подробнее</label>
                 </article>
             </section>
-            
         </main>
-
-        <footer class="footer">
+        <footer class="footer footer_theme_sky">
             <p>© ГУ КРО ФСС РФ, 2021 </p>
         </footer>
-
+        <button class="up-button page__up-button up-button_theme_sky" type="button">
+            ↑
+            <span class="up-button__up">Наверх</span>
+        </button>
+        <script src="js/filter.js"></script> 
+        <script src="js/up-button.js"></script>
     </body>
 </html>
