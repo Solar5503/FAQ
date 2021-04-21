@@ -221,7 +221,7 @@ html {
     display: none;
     cursor: pointer;
 }
-.page__up-button{
+.body__up-button{
     position: fixed;
     bottom: 20px;
     right: 120px;
