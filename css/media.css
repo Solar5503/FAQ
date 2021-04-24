@@ -1,8 +1,10 @@
 @media(max-width:980px){
-    .page{
+    .body{
         grid-template-columns:180px 1fr;
         grid-template-areas: 
-        "nav questions";
+        "header header"
+        "nav page "
+        "footer footer";    
     }
     .item__big-image{
         max-width: 100%;
@@ -27,10 +29,12 @@
         justify-content: space-between;
         height: 10vh;
     }
-    .page{
+    .body{
         grid-template-columns: 1fr;
         grid-template-areas: 
-        "questions";
+        "header"
+        "page"
+        "footer"; 
         position: relative;
     }
     .item__h3{
@@ -69,7 +73,7 @@
     .pc-menu{
         position: absolute;
         background-color: #01537c;
-        top: 0;
+        top: 85px;
         left: -180px;
         z-index: 1;
         transition: all 0.5s;

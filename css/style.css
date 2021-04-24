@@ -7,7 +7,13 @@ html {
     line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-attachment: fixed;    
+    background-attachment: fixed; 
+    display:grid;
+    grid-template-columns:1fr 180px 1fr 1fr;
+    grid-template-areas: 
+    "header header header header"
+    ". nav page ."
+    "footer footer footer footer";     
 }
 .body_theme_sky{
     background-color: #006ca1;
@@ -16,6 +22,7 @@ html {
 }
 /*Шапка*/
 .header{
+    grid-area: header;
     display:flex; 
     justify-content: center;   
     min-height:8vh;  
@@ -37,10 +44,7 @@ html {
 }
 /********************/
 .page{
-    display:grid;
-    grid-template-columns:1fr 180px 1fr 1fr;
-    grid-template-areas: 
-    ". nav questions .";  
+    grid-area: page;
 }
 /*Блок навигации*/
 .nav{
@@ -198,6 +202,7 @@ html {
 }
 /*Подвал*/
 .footer{
+    grid-area: footer;
     min-height:8vh;
     display:flex; 
     justify-content: center;
