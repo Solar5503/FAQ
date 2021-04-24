@@ -3,10 +3,10 @@ let articles=document.querySelectorAll('.item');
 
 for(let link of links){
     link.onclick=function(){
-        if (document.querySelector('#navList a.active') !== null) {
-            document.querySelector('#navList a.active').classList.remove('active');
+        if (document.querySelector('#nav-list a.pc-menu__ref_active') !== null) {
+            document.querySelector('#nav-list a.pc-menu__ref_active').classList.remove('pc-menu__ref_active');
         }
-          link.classList.add('active');
+          link.classList.add('pc-menu__ref_active');
         
         for (let article of articles){
             if ( article.dataset.category !== link.dataset.category && link.dataset.category !== 'all') {

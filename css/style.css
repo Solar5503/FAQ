@@ -101,7 +101,7 @@ html {
     right: 60px;
     height: 90px;
 }
-.active{
+.pc-menu__ref_active{
     box-shadow: 2px 2px 2px #cccccc;
     transform: translate(-30px) scale(1.1);
     transition: transform 0.5s ease-in-out;
@@ -109,7 +109,7 @@ html {
     background-color:  #00346e;
     font-weight: bold;
 }
-.pc-menu__ref.active::after,.pc-menu__ref.active::before{
+.pc-menu__ref.pc-menu__ref_active::after,.pc-menu__ref.pc-menu__ref_active::before{
     height: 0;
 }
 /********************************/
@@ -162,7 +162,6 @@ html {
 }
 .item__label_theme_sky{
     background-color: rgb(1, 83, 124, 0.9);
-    text-shadow: 1px 1px 2px #cccccc;
 }
 .item__label::after{
     position: absolute;

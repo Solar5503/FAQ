@@ -9,7 +9,7 @@
     .item__big-image{
         max-width: 100%;
     }
-    .active{
+    .pc-menu__ref_active{
         transform: translate(-5px) scale(1.1);
         transition: transform 0.5s ease-in-out;
     }
@@ -73,7 +73,7 @@
     .pc-menu{
         position: absolute;
         background-color: #01537c;
-        top: 85px;
+        top: 95px;
         left: -180px;
         z-index: 1;
         transition: all 0.5s;
