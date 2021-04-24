@@ -1,5 +1,6 @@
 let links=document.querySelectorAll('.pc-menu__ref');
 let articles=document.querySelectorAll('.item');
+let upButton = document.querySelector('.up-button');
 
 for(let link of links){
     link.onclick=function(){
@@ -19,3 +20,17 @@ for(let link of links){
     }
 }
 
+window.onscroll = function () {
+  if (window.pageYOffset > 200) {
+    upButton.classList.add('up-button_shown');
+  } 
+  else {
+    upButton.classList.remove('up-button_shown');
+    
+    };
+
+};
+
+upButton.onclick = function () {
+  window.scrollTo(0, 0);
+};
