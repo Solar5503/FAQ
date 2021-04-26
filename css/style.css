@@ -39,7 +39,6 @@ html {
     margin-bottom: 10px;
 }
 .header__heading{
-    text-shadow: 2px 2px 2px #cccccc;
     margin: auto 0;
 }
 /********************/
@@ -252,7 +251,6 @@ html {
     bottom: 10px;
     right: -100px;
     font-size: 22px;
-    text-shadow: 2px 2px 2px #cccccc;
     color:white;
 }
 /**************************/
