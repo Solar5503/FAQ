@@ -11,9 +11,9 @@ for(let link of links){
         
         for (let article of articles){
             if ( article.dataset.category !== link.dataset.category && link.dataset.category !== 'all') {
-                article.classList.add('hidden');
+                article.classList.add('item__envelope_hidden');
             } else{
-                    article.classList.remove('hidden');
+                    article.classList.remove('item__envelope_hidden');
                    }
         }
     
