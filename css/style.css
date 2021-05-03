@@ -397,9 +397,12 @@ html {
         bottom: -5px;
         right: 35px;
     }
-    #toggle-menu:checked ~ .pc-menu {
+    .pc-menu_open{
         left: 0;
     }
+    /* #toggle-menu:checked ~ .pc-menu { */
+        /* left: 0; */
+    /* } */
 }
 @media(max-width:420px){
     .header{

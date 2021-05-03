@@ -1,6 +1,8 @@
 let links=document.querySelectorAll('.pc-menu__ref');
 let articles=document.querySelectorAll('.item');
 let upButton = document.querySelector('.up-button');
+let menu = document.querySelector('.pc-menu');
+let label = document.querySelector('.mobile-menu__toggle'); 
 
 for(let link of links){
     link.onclick=function(){
@@ -26,11 +28,21 @@ window.onscroll = function () {
   } 
   else {
     upButton.classList.remove('up-button_shown');
-    
     };
-
 };
 
 upButton.onclick = function () {
   window.scrollTo(0, 0);
 };
+
+label.onclick = function(){
+  if(!menu.classList.contains('pc-menu_open')){
+    menu.classList.add('pc-menu_open');
+  }
+  else{
+    menu.classList.remove('pc-menu_open');
+  }
+}
+menu.onmouseleave = function(){
+  menu.classList.remove('pc-menu_open');
+}
