@@ -131,6 +131,7 @@ html {
     color:#ffffff;
     font-weight: bold;
 }
+
 .table-login{
     border: 2px solid #ffffff ;
     border-collapse: collapse;
@@ -152,13 +153,25 @@ html {
     text-align: center;
 }
 
-.item__h3{
-    margin-bottom: 0;
-    margin-left: 20px;
+.item p{
+    text-indent: 21px;
+    text-align: justify;
+}
+.item__label{
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 20px;
     position: relative;
     box-shadow: 2px 6px 2px -4px #cccccc;
 }
-.item__h3::before{
+.item__label:hover{
+    transform:  scale(1.1);
+    overflow: hidden;
+    transition:  transform 0.5s ease-in-out;
+    color: #cccccc;
+}
+.item__label::before{
     content: counter(flag);
     counter-increment: flag;
     border:1px solid white;
@@ -170,43 +183,6 @@ html {
     line-height: 20px;
     box-shadow: 2px 2px 2px #cccccc;
     text-align: center;
-}
-.item p{
-    text-indent: 21px;
-    text-align: justify;
-}
-.item__label{
-    cursor: pointer;
-    align-self: flex-end;
-    position: relative;
-    left:-20px;
-    top:10px;
-    line-height: 30px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border:1px solid white;
-    border-right: none;
-    margin-bottom: 20px;
-}
-.item__label_theme_sky{
-    background-color: rgb(1, 83, 124, 0.9);
-}
-.item__label::after{
-    position: absolute;
-    top: 0;
-    right: -15px;
-    content: "";
-    width: 30px;
-    height: 30px;
-    border-radius: 50px 0 0 0;
-    background-color: rgb(1, 83, 124, 0.9);
-    transform: rotate(-45deg) scale(0.73);
-    border-bottom:1px solid white;
-    border-right:1px solid white;
-}
-.item__label:hover{
-    transform:  scale(1.1);
-    transition:  transform 0.5s ease-in-out;
 }
 .item__input:checked + .item__envelope{
     display: block;
@@ -340,7 +316,7 @@ html {
         "footer"; 
         position: relative;
     }
-    .item__h3{
+    .item__label{
         font-size: 1em;
     }
     .item__envelope{
