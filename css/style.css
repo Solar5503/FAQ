@@ -380,6 +380,28 @@ html {
         /* left: 0; */
     /* } */
 }
+@media(max-height:420px){
+    .header{
+        height: 20vh;
+    }
+    .header__heading{
+        margin-left: 40px;
+    }
+    .mobile-menu{
+        width: 80px;
+        height: 60px;
+        border:none;
+        box-shadow:none;
+    }
+    .mobile-menu__toggle::after{
+        font-size: 65px;
+        top: -34px;
+        left: -1px;
+    }
+    .footer{
+        height: 15vh;
+    }
+}
 @media(max-width:420px){
     .header{
         height: 14vh;
