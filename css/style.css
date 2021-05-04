@@ -387,6 +387,9 @@ html {
     .header__heading{
         margin-left: 40px;
     }
+    .questions{
+        padding-bottom: 50px;
+    }
     .mobile-menu{
         width: 80px;
         height: 60px;
@@ -398,8 +401,16 @@ html {
         top: -34px;
         left: -1px;
     }
-    .footer{
-        height: 15vh;
+    .footer, .up-button__up{
+        display: none;
+    }
+    .up-button {
+        width: 48px;
+        height: 48px;
+        font-size: 30px;
+    }
+    .body__up-button{
+        right: 40px;
     }
 }
 @media(max-width:420px){
@@ -408,6 +419,9 @@ html {
     }
     .header__heading{
         margin-left: 10px;
+    }
+    .questions{
+        padding-bottom: 50px;
     }
     .mobile-menu{
         width: 80px;
@@ -429,5 +443,16 @@ html {
     }
     .table-login__td{
         padding:5px;  
+    }
+    .footer, .up-button__up{
+        display: none;
+    }
+    .up-button {
+        width: 48px;
+        height: 48px;
+        font-size: 30px;
+    }
+    .body__up-button{
+        right: 40px;
     }
 }
