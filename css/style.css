@@ -116,7 +116,7 @@ html {
 /********************************/
 .questions{ 
     background-color:rgb(0,0,0,0.5);
-    padding: 0 20px;
+    padding: 0 20px 20px;
     min-height: 84vh;
     counter-reset: flag;
 }
@@ -162,14 +162,13 @@ html {
     font-size: 1.2em;
     font-weight: bold;
     margin: 20px;
+    margin-left: 40px;
     position: relative;
     box-shadow: 2px 6px 2px -4px #cccccc;
 }
 .item__label:hover{
     transform:  scale(1.1);
-    overflow: hidden;
     transition:  transform 0.5s ease-in-out;
-    color: #cccccc;
 }
 .item__label::before{
     content: counter(flag);
