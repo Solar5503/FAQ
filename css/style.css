@@ -153,6 +153,10 @@ html {
     text-align: center;
 }
 
+.item {
+    position: relative;
+}
+
 .item p{
     text-indent: 21px;
     text-align: justify;
@@ -183,6 +187,16 @@ html {
     box-shadow: 2px 2px 2px #cccccc;
     text-align: center;
 }
+.item::after {
+    content: attr(data-category);
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 11px;
+    color: rgb(164, 216, 240);
+    font-weight: bold;
+}
+
 .item__input:checked + .item__envelope{
     display: block;
 }
